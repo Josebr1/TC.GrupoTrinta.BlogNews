@@ -10,9 +10,9 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services
-            .AddAppConections(builder.Configuration)
-            .AddUseCases()
-            .AddAndConfigureControllers();
+        .AddAppConections(builder.Configuration)
+        .AddUseCases()
+        .AddAndConfigureControllers();
 
         builder.Services.AddProblemDetails(cfg =>
         {
@@ -35,12 +35,12 @@ public class Program
         builder.Services.AddCors(options =>
         {
             options.AddPolicy(name: CORS_POLICY,
-                corsPolicyBuilder =>
-                {
-                    corsPolicyBuilder.AllowAnyOrigin();
-                    corsPolicyBuilder.AllowAnyMethod();
-                    corsPolicyBuilder.AllowAnyHeader();
-                });
+                              corsPolicyBuilder =>
+            {
+                corsPolicyBuilder.AllowAnyOrigin();
+                corsPolicyBuilder.AllowAnyMethod();
+                corsPolicyBuilder.AllowAnyHeader();
+            });
         });
 
         var app = builder.Build();

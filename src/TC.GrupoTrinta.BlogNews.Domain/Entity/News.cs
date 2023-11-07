@@ -3,11 +3,26 @@
 namespace TC.GrupoTrinta.BlogNews.Domain.Entity;
 public class News : AggregateRoot
 {
-    public string Title { get; private set; }
-    public string Content { get; private set; }
-    public string Author { get; private set; }
-    public DateTime PublicationDate { get; private set; }
-    public DateTime CreateAt { get; private set; }
+    public string Title {
+        get;
+        private set;
+    }
+    public string Content {
+        get;
+        private set;
+    }
+    public string Author {
+        get;
+        private set;
+    }
+    public DateTime PublicationDate {
+        get;
+        private set;
+    }
+    public DateTime CreateAt {
+        get;
+        private set;
+    }
 
 
     public News(string title, string content, string author, DateTime publicationDate)
