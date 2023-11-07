@@ -1,8 +1,6 @@
 # Diagram
 
-
 ## Architecture
-
 
 ![Architecture](Docs/Architecture.jpg)
 
@@ -33,13 +31,12 @@
 - Specification Pattern
 - Options Pattern
 
-
 ## How to run
-
 
 - For Visual Studio: `Select profile > Run (F5)`
 - For VSCode: `Select configuration > Run (F5)`
 - For Terminal:
+
 ```PowerShell
 
 dotnet build src\TC.GrupoTrinta.BlogNews.Api\TC.GrupoTrinta.BlogNews.Api.csproj
@@ -67,8 +64,8 @@ The tests cover the following scenarios:
 
 #### Packages
 
-* [xUnit](https://xunit.net/)
-* [Bogus](https://github.com/bchavez/Bogus)
+- [xUnit](https://xunit.net/)
+- [Bogus](https://github.com/bchavez/Bogus)
 
 ### Docker
 
@@ -79,8 +76,7 @@ docker run -it --rm -p 3000:80 --env ASPNETCORE_ENVIRONMENT=Development --name b
 docker run -dp 3000:80 --env ASPNETCORE_ENVIRONMENT=Development --name blognews-docker-container blognews-docker-image
 ```
 
-
-###  Docker Compose
+### Docker Compose
 
 ```Docker
 
@@ -89,20 +85,17 @@ docker-compose -f docker-compose-integration.yml up
 
 ## Swagger (Dev env only)
 
-
 - http://localhost:3000/swagger/index.html
 
 ## Swagger (Publish Azure - Web App Service)
 
-
 - https://grupotrinta-fiap.azurewebsites.net/swagger/index.html
-
 
 ## Use the Azure CLI
 
 - [Azure CLI](https://learn.microsoft.com/pt-br/cli/azure/install-azure-cli-windows?tabs=azure-cli)
 
-Connect Azure Account 
+Connect Azure Account
 
 ```PowerShell
 
@@ -110,7 +103,6 @@ Az login
 ```
 
 ### Create image (Azure Container Registry new repository - CLI)
-
 
 ```Azure
 
